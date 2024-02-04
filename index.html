@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>noah web dev</title>
+</head>
+
+<body>
+    <div class="cart" id="cart">
+        <h1>Welcome To Saad Dahlab University</h1>
+        <div class="content">
+            <h2>Our student </h2>
+            <h4>please fill in the form relating to your end-of-studies project.</h4>
+        </div>
+        <input type="checkbox" id="checking">
+        <label for="checking">I have read and understood</label>
+        <button onclick="change()">Agree</button>
+    </div>
+    <div class="center">
+        <h1>Login</h1>
+        <form method="post">
+            <div class="text">
+                <input name="username" type="text" required>
+                <span></span>
+                <label for="username">Username</label>
+            </div>
+            <div class="text">
+                <input name="password" type="password" required>
+                <span></span>
+                <label for="password">Password</label>
+            </div>
+            <div class="pass">
+                <a href="forget.html">Forget Password ?</a>
+                <input type="submit" value="Login">
+            </div>
+        </form>
+
+
+    </div>
+    <script>
+       
+
+        function change() {
+            const checkbox = document.getElementById("checking").checked
+            // if checked
+            if (checkbox == true) {
+                
+                document.querySelector('.center').style.display = "block"
+                document.querySelector('.cart').style.display = "none"
+                
+            } else {
+                window.alert('check it please')
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
